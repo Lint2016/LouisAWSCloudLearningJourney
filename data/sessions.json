@@ -1,0 +1,78 @@
+[
+  {
+    "id": "2026-w1-fri",
+    "date": "2026-02-06",
+    "week": 1,
+    "day": "Friday",
+    "phase": "Phase 1: Foundations",
+    "topic": "Introduction to Cloud & AWS Global Infrastructure",
+    "tasks": [
+      { "text": "Understand Cloud Computing (IaaS, PaaS, SaaS)", "completed": false },
+      { "text": "AWS Global Infrastructure (Regions, AZs, Edge Locations)", "completed": false },
+      { "text": "Create AWS Free Tier Account", "completed": false },
+      { "text": "Explore AWS Management Console", "completed": false }
+    ],
+    "completed": false,
+    "notes": "",
+    "issues": "",
+    "fixes": "",
+    "links": ["https://aws.amazon.com/what-is-cloud-computing/", "https://aws.amazon.com/about-aws/global-infrastructure/"]
+  },
+  {
+    "id": "2026-w1-sat",
+    "date": "2026-02-07",
+    "week": 1,
+    "day": "Saturday",
+    "phase": "Phase 1: Foundations",
+    "topic": "IAM (Identity and Access Management) Deep Dive",
+    "tasks": [
+      { "text": "IAM Users, Groups, Roles, Policies", "completed": false },
+      { "text": "Setup MFA for Root User", "completed": false },
+      { "text": "Create Admin User and Group", "completed": false },
+      { "text": "Apply Password Policy", "completed": false }
+    ],
+    "completed": false,
+    "notes": "",
+    "issues": "",
+    "fixes": "",
+    "links": ["https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html"]
+  },
+  {
+    "id": "2026-w2-fri",
+    "date": "2026-02-13",
+    "week": 2,
+    "day": "Friday",
+    "phase": "Phase 1: Foundations",
+    "topic": "EC2 Essentials",
+    "tasks": [
+      { "text": "Launch a Linux EC2 Instance", "completed": false },
+      { "text": "Connect via SSH", "completed": false },
+      { "text": "Install Apache Web Server", "completed": false },
+      { "text": "Explore EC2 Instance Types and Purchasing Options", "completed": false }
+    ],
+    "completed": false,
+    "notes": "",
+    "issues": "",
+    "fixes": "",
+    "links": ["https://aws.amazon.com/ec2/"]
+  },
+  {
+    "id": "2026-w2-sat",
+    "date": "2026-02-14",
+    "week": 2,
+    "day": "Saturday",
+    "phase": "Phase 1: Foundations",
+    "topic": "S3 Fundamentals",
+    "tasks": [
+      { "text": "Create an S3 Bucket", "completed": false },
+      { "text": "Upload and Manage Objects", "completed": false },
+      { "text": "Static Website Hosting on S3", "completed": false },
+      { "text": "Bucket Policies and ACLs", "completed": false }
+    ],
+    "completed": false,
+    "notes": "",
+    "issues": "",
+    "fixes": "",
+    "links": ["https://aws.amazon.com/s3/"]
+  }
+]

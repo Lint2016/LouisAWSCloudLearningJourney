@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | AWS Learning Journey</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="assets/images/south-africa.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">AWS Tracker</a>
+            <ul>
+                <li><a href="index.html" class="active">Dashboard</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="reflection.html">Reflection</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="mb-2">
+            <h1>Welcome, Cloud Engineer 🚀</h1>
+            <p class="text-secondary">Tracking your journey to AWS mastery (Feb 2026 - Oct 2026)</p>
+        </div>
+
+        <div class="grid">
+            <!-- Progress Overview -->
+            <div class="card">
+                <h3>Overall Progress</h3>
+                <div class="progress-container">
+                    <div id="overall-progress-bar" class="progress-bar" style="width: 0%"></div>
+                </div>
+                <p id="progress-stats" class="text-secondary">0 of 0 sessions completed (0%)</p>
+                <div class="mt-1">
+                    <a href="schedule.html" class="btn btn-outline" style="width: 100%">View Full Timeline</a>
+                </div>
+            </div>
+
+            <!-- Next Session -->
+            <div class="card" id="next-session-card">
+                <h3>Next Upcoming Session</h3>
+                <div id="next-session-content">
+                    <p class="text-secondary">Loading your next session...</p>
+                </div>
+                <div class="mt-1">
+                    <a id="go-to-session-btn" href="#" class="btn btn-primary" style="width: 100%; display: none;">Go to Session</a>
+                </div>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="card">
+                <h3>Current Phase</h3>
+                <div id="current-phase-content">
+                    <p id="current-phase-name" style="font-weight: 700; font-size: 1.2rem; color: var(--primary);">Loading...</p>
+                    <p class="text-secondary mt-1">Focusing on core AWS foundations and hands-on services.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mt-1">
+            <h3>Recent Motivation</h3>
+            <p>"The best way to learn is by doing. Every failure is a step towards understanding."</p>
+        </div>
+    </main>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
