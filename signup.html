@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | AWS Learning Journey</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="assets/images/south-africa.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .auth-container {
+            max-width: 400px;
+            margin: 4rem auto;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">AWS Tracker</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="auth-container">
+            <div class="card">
+                <h2>Create Account 🚀</h2>
+                <p class="text-secondary mb-2">Start your AWS journey today.</p>
+
+                <form id="signup-form">
+                    <div style="text-align: left; margin-bottom: 1rem;">
+                        <label for="email" class="text-secondary">Email Address</label>
+                        <input type="email" id="email" class="text-input" placeholder="you@example.com" required
+                            style="width: 100%; padding: 0.5rem; margin-top: 0.25rem;">
+                    </div>
+
+                    <div style="text-align: left; margin-bottom: 1.5rem;">
+                        <label for="password" class="text-secondary">Password</label>
+                        <input type="password" id="password" class="text-input" placeholder="Min. 6 characters" required
+                            minlength="6" style="width: 100%; padding: 0.5rem; margin-top: 0.25rem;">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Create Account</button>
+                </form>
+
+                <p class="text-secondary mt-1" style="font-size: 0.9rem;">
+                    Already have an account? <a href="login.html" style="color: var(--primary);">Log In</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <script type="module">
+        import { Auth } from './js/auth.js';
+
+        document.getElementById('signup-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const btn = e.target.querySelector('button');
+
+            try {
+                btn.disabled = true;
+                btn.textContent = 'Creating account...';
+                await Auth.signUp(email, password);
+                // Redirect handled in auth.js or here
+                window.location.href = 'index.html';
+            } catch (error) {
+                alert('Signup failed: ' + error.message);
+                btn.disabled = false;
+                btn.textContent = 'Create Account';
+            }
+        });
+    </script>
+</body>
+
+</html>

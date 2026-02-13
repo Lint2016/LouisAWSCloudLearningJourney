@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflection | AWS Learning Journey</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="assets/images/south-africa.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">AWS Tracker</a>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="reflection.html" class="active">Reflection</a></li>
+                <li><a href="login.html" id="auth-link" style="color: var(--primary);">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="mb-2">
+            <h1>Weekly Reflection 🧠</h1>
+            <p class="text-secondary">Consolidate your learning. Be honest about what you don't know.</p>
+        </div>
+
+        <div class="grid">
+            <!-- New Reflection Form -->
+            <div class="card" style="grid-column: span 2;">
+                <h3>New Reflection</h3>
+                <div class="mt-1">
+                    <label class="text-secondary" style="display: block; margin-bottom: 0.5rem;">Select Week</label>
+                    <select id="week-select" class="text-input" style="width: 100%; padding: 0.5rem;">
+                        <!-- Options populated by JS -->
+                    </select>
+                </div>
+
+                <div class="mt-1">
+                    <label class="text-secondary" style="display: block; margin-bottom: 0.5rem;">What I Understood
+                        Well</label>
+                    <textarea id="understood-input" class="text-input" rows="3"
+                        placeholder="Core concepts that clicked..."></textarea>
+                </div>
+
+                <div class="mt-1">
+                    <label class="text-secondary" style="display: block; margin-bottom: 0.5rem;">What Confused
+                        Me</label>
+                    <textarea id="confused-input" class="text-input" rows="3"
+                        placeholder="Topics that need review..."></textarea>
+                </div>
+
+                <div class="mt-1">
+                    <label class="text-secondary" style="display: block; margin-bottom: 0.5rem;">Questions for
+                        Later</label>
+                    <textarea id="questions-input" class="text-input" rows="3"
+                        placeholder="Open questions to research..."></textarea>
+                </div>
+
+                <button id="save-reflection-btn" class="btn btn-primary mt-1" style="width: 100%">Save
+                    Reflection</button>
+            </div>
+
+            <!-- Past Reflections -->
+            <div>
+                <h3>Past Reflections</h3>
+                <div id="past-reflections-container">
+                    <p class="text-secondary">No reflections yet.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="js/reflection.js"></script>
+</body>
+
+</html>

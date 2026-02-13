@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule | AWS Learning Journey</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="assets/images/south-africa.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">AWS Tracker</a>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="schedule.html" class="active">Schedule</a></li>
+                <li><a href="reflection.html">Reflection</a></li>
+                <li><a href="login.html" id="auth-link" style="color: var(--primary);">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="mb-2">
+            <h1>Study Timeline 📅</h1>
+            <p class="text-secondary">Full curriculum: Feb 2026 - Oct 2026</p>
+        </div>
+
+        <div id="schedule-container" class="grid-timeline">
+            <!-- Sessions will be injected here -->
+            <p class="text-secondary">Loading schedule...</p>
+        </div>
+    </main>
+
+    <script type="module" src="js/schedule.js"></script>
+</body>
+
+</html>

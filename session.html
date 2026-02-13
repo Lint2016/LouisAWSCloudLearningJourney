@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session | AWS Learning Journey</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="assets/images/south-africa.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">AWS Tracker</a>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="reflection.html">Reflection</a></li>
+                <li><a href="login.html" id="auth-link" style="color: var(--primary);">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="mb-2">
+            <a href="schedule.html" class="btn-outline"
+                style="padding: 0.25rem 0.5rem; font-size: 0.9rem; margin-bottom: 1rem;">← Back to Schedule</a>
+            <h1 id="session-topic">Loading Session...</h1>
+            <p id="session-metadata" class="text-secondary">Please wait...</p>
+        </div>
+
+        <div class="grid">
+            <!-- Left Column: Tasks -->
+            <div style="grid-column: span 2;">
+                <div class="card">
+                    <h3>✅ Task Checklist</h3>
+                    <div id="tasks-container">
+                        <!-- Tasks go here -->
+                    </div>
+                </div>
+
+                <div class="card mt-1">
+                    <h3>📚 Resources & Links</h3>
+                    <ul id="links-container" style="list-style: none; padding-left: 0;">
+                        <!-- Links go here -->
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Column: Notes & Fixes -->
+            <div>
+                <div class="card">
+                    <h3>📝 Notes</h3>
+                    <textarea id="notes-input" class="text-input"
+                        placeholder="Key takeaways from this session..."></textarea>
+                </div>
+
+                <div class="card mt-1">
+                    <h3 style="color: var(--danger);">💥 What Broke?</h3>
+                    <textarea id="issues-input" class="text-input"
+                        placeholder="Describe any errors or blockers..."></textarea>
+                </div>
+
+                <div class="card mt-1">
+                    <h3 style="color: var(--success);">🛠️ How I Fixed It</h3>
+                    <textarea id="fixes-input" class="text-input" placeholder="Solution or workaround..."></textarea>
+                </div>
+
+                <div class="mt-1">
+                    <button id="save-btn" class="btn btn-primary" style="width: 100%">Save Progress</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="js/session.js"></script>
+</body>
+
+</html>

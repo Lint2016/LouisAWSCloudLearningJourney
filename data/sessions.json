@@ -1,78 +1,498 @@
 [
   {
-    "id": "2026-w1-fri",
-    "date": "2026-02-06",
+    "id": "week-1-fri",
     "week": 1,
     "day": "Friday",
-    "phase": "Phase 1: Foundations",
-    "topic": "Introduction to Cloud & AWS Global Infrastructure",
+    "title": "AWS Account & Discipline",
+    "topic": "Account Setup Like a Pro",
     "tasks": [
-      { "text": "Understand Cloud Computing (IaaS, PaaS, SaaS)", "completed": false },
-      { "text": "AWS Global Infrastructure (Regions, AZs, Edge Locations)", "completed": false },
-      { "text": "Create AWS Free Tier Account", "completed": false },
-      { "text": "Explore AWS Management Console", "completed": false }
+      {
+        "text": "Create AWS account",
+        "completed": false
+      },
+      {
+        "text": "Enable billing alerts",
+        "completed": false
+      },
+      {
+        "text": "Enable AWS Budgets",
+        "completed": false
+      },
+      {
+        "text": "Enable MFA on root",
+        "completed": false
+      },
+      {
+        "text": "Lock root user (never use again)",
+        "completed": false
+      }
+    ],
+    "deliverables": [
+      "Screenshot of billing alert",
+      "Written note: Why root user is dangerous"
     ],
     "completed": false,
     "notes": "",
     "issues": "",
     "fixes": "",
-    "links": ["https://aws.amazon.com/what-is-cloud-computing/", "https://aws.amazon.com/about-aws/global-infrastructure/"]
+    "links": [
+      "https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/"
+    ]
   },
   {
-    "id": "2026-w1-sat",
-    "date": "2026-02-07",
+    "id": "week-1-sat",
     "week": 1,
     "day": "Saturday",
-    "phase": "Phase 1: Foundations",
-    "topic": "IAM (Identity and Access Management) Deep Dive",
+    "title": "IAM – Your First Real Skill",
+    "topic": "IAM Fundamentals",
     "tasks": [
-      { "text": "IAM Users, Groups, Roles, Policies", "completed": false },
-      { "text": "Setup MFA for Root User", "completed": false },
-      { "text": "Create Admin User and Group", "completed": false },
-      { "text": "Apply Password Policy", "completed": false }
+      {
+        "text": "Create IAM Admin user",
+        "completed": false
+      },
+      {
+        "text": "Create IAM group",
+        "completed": false
+      },
+      {
+        "text": "Attach least-privilege policy",
+        "completed": false
+      },
+      {
+        "text": "Log out of root, log in as IAM user",
+        "completed": false
+      },
+      {
+        "text": "Intentionally deny access → fix it",
+        "completed": false
+      }
+    ],
+    "deliverables": [
+      "IAM diagram (user → group → policy)",
+      "Explain difference: user vs role"
     ],
     "completed": false,
     "notes": "",
     "issues": "",
     "fixes": "",
-    "links": ["https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html"]
+    "links": [
+      "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html"
+    ]
   },
   {
-    "id": "2026-w2-fri",
-    "date": "2026-02-13",
+    "id": "week-2-fri",
     "week": 2,
     "day": "Friday",
-    "phase": "Phase 1: Foundations",
-    "topic": "EC2 Essentials",
+    "title": "IAM Deep Dive",
+    "topic": "IAM Policies & Permissions",
     "tasks": [
-      { "text": "Launch a Linux EC2 Instance", "completed": false },
-      { "text": "Connect via SSH", "completed": false },
-      { "text": "Install Apache Web Server", "completed": false },
-      { "text": "Explore EC2 Instance Types and Purchasing Options", "completed": false }
+      {
+        "text": "Read & modify JSON policy",
+        "completed": false
+      },
+      {
+        "text": "Create custom policy",
+        "completed": false
+      },
+      {
+        "text": "Attach to group",
+        "completed": false
+      },
+      {
+        "text": "Test allowed vs denied actions",
+        "completed": false
+      }
+    ],
+    "deliverables": [
+      "One custom IAM policy",
+      "Notes: Why least privilege matters"
     ],
     "completed": false,
     "notes": "",
     "issues": "",
     "fixes": "",
-    "links": ["https://aws.amazon.com/ec2/"]
+    "links": [
+      "https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html"
+    ]
   },
   {
-    "id": "2026-w2-sat",
-    "date": "2026-02-14",
+    "id": "week-2-sat",
     "week": 2,
     "day": "Saturday",
-    "phase": "Phase 1: Foundations",
-    "topic": "S3 Fundamentals",
+    "title": "IAM Deep Dive",
+    "topic": "IAM Roles (VERY IMPORTANT)",
     "tasks": [
-      { "text": "Create an S3 Bucket", "completed": false },
-      { "text": "Upload and Manage Objects", "completed": false },
-      { "text": "Static Website Hosting on S3", "completed": false },
-      { "text": "Bucket Policies and ACLs", "completed": false }
+      {
+        "text": "Create IAM role for EC2",
+        "completed": false
+      },
+      {
+        "text": "Launch EC2 with role",
+        "completed": false
+      },
+      {
+        "text": "Access S3 without access keys",
+        "completed": false
+      },
+      {
+        "text": "Prove why roles > access keys",
+        "completed": false
+      }
+    ],
+    "deliverables": [
+      "Written explanation (plain English): “Why IAM roles are safer than access keys”"
     ],
     "completed": false,
     "notes": "",
     "issues": "",
     "fixes": "",
-    "links": ["https://aws.amazon.com/s3/"]
+    "links": [
+      "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html"
+    ]
+  },
+  {
+    "id": "week-3-fri",
+    "week": 3,
+    "day": "Friday",
+    "title": "EC2 (Core Job Skill)",
+    "topic": "EC2 Fundamentals",
+    "tasks": [
+      {
+        "text": "Launch EC2 (Amazon Linux)",
+        "completed": false
+      },
+      {
+        "text": "Understand Instance type, Key pair, Security group",
+        "completed": false
+      },
+      {
+        "text": "Connect via SSH",
+        "completed": false
+      }
+    ],
+    "deliverables": [
+      "SSH successfully",
+      "Note every option you didn’t understand"
+    ],
+    "completed": false,
+    "notes": "",
+    "issues": "",
+    "fixes": "",
+    "links": [
+      "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html"
+    ]
+  },
+  {
+    "id": "week-3-sat",
+    "week": 3,
+    "day": "Saturday",
+    "title": "EC2 (Core Job Skill)",
+    "topic": "EC2 Internals",
+    "tasks": [
+      {
+        "text": "Install Nginx manually",
+        "completed": false
+      },
+      {
+        "text": "Restart EC2 → confirm app still runs",
+        "completed": false
+      },
+      {
+        "text": "Stop EC2 → confirm billing behavior",
+        "completed": false
+      },
+      {
+        "text": "Terminate EC2 → confirm deletion",
+        "completed": false
+      }
+    ],
+    "deliverables": [
+      "Short write-up: Stop vs Terminate"
+    ],
+    "completed": false,
+    "notes": "",
+    "issues": "",
+    "fixes": "",
+    "links": []
+  },
+  {
+    "id": "week-4-fri",
+    "week": 4,
+    "day": "Friday",
+    "title": "Storage (S3 & EBS)",
+    "topic": "S3 (Where Most Leaks Happen)",
+    "tasks": [
+      {
+        "text": "Create S3 bucket",
+        "completed": false
+      },
+      {
+        "text": "Upload files",
+        "completed": false
+      },
+      {
+        "text": "Make bucket private",
+        "completed": false
+      },
+      {
+        "text": "Apply bucket policy",
+        "completed": false
+      },
+      {
+        "text": "Enable versioning",
+        "completed": false
+      }
+    ],
+    "deliverables": [
+      "Bucket policy JSON",
+      "Notes: Why public S3 is dangerous"
+    ],
+    "completed": false,
+    "notes": "",
+    "issues": "",
+    "fixes": "",
+    "links": [
+      "https://aws.amazon.com/s3/"
+    ]
+  },
+  {
+    "id": "week-4-sat",
+    "week": 4,
+    "day": "Saturday",
+    "title": "Storage (S3 & EBS)",
+    "topic": "EBS Volumes",
+    "tasks": [
+      {
+        "text": "Create EBS volume",
+        "completed": false
+      },
+      {
+        "text": "Attach to EC2",
+        "completed": false
+      },
+      {
+        "text": "Mount volume",
+        "completed": false
+      },
+      {
+        "text": "Write data",
+        "completed": false
+      },
+      {
+        "text": "Detach volume → reattach → confirm data persists",
+        "completed": false
+      }
+    ],
+    "deliverables": [
+      "Explain: Why EBS is not the same as EC2 storage"
+    ],
+    "completed": false,
+    "notes": "",
+    "issues": "",
+    "fixes": "",
+    "links": [
+      "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEbsVolumes.html"
+    ]
+  },
+  {
+    "id": "week-5-fri",
+    "week": 5,
+    "day": "Friday",
+    "title": "Networking (Interview Fail)",
+    "topic": "VPC Fundamentals",
+    "tasks": [
+      {
+        "text": "Create custom VPC",
+        "completed": false
+      },
+      {
+        "text": "Create public subnet",
+        "completed": false
+      },
+      {
+        "text": "Create internet gateway",
+        "completed": false
+      },
+      {
+        "text": "Attach route table",
+        "completed": false
+      }
+    ],
+    "deliverables": [
+      "Diagram: VPC → Subnet → IGW"
+    ],
+    "completed": false,
+    "notes": "",
+    "issues": "",
+    "fixes": "",
+    "links": [
+      "https://aws.amazon.com/vpc/"
+    ]
+  },
+  {
+    "id": "week-5-sat",
+    "week": 5,
+    "day": "Saturday",
+    "title": "Networking (Interview Fail)",
+    "topic": "Security Groups vs Reality",
+    "tasks": [
+      {
+        "text": "Launch EC2 in custom VPC",
+        "completed": false
+      },
+      {
+        "text": "Open port 22 → test SSH",
+        "completed": false
+      },
+      {
+        "text": "Open port 80 → test HTTP",
+        "completed": false
+      },
+      {
+        "text": "Break access → fix it",
+        "completed": false
+      }
+    ],
+    "deliverables": [
+      "Answer: Why can’t I access my EC2?"
+    ],
+    "completed": false,
+    "notes": "",
+    "issues": "",
+    "fixes": "",
+    "links": []
+  },
+  {
+    "id": "week-6-fri",
+    "week": 6,
+    "day": "Friday",
+    "title": "Putting It Together",
+    "topic": "Mini Architecture Build",
+    "tasks": [
+      {
+        "text": "EC2 in custom VPC",
+        "completed": false
+      },
+      {
+        "text": "S3 bucket",
+        "completed": false
+      },
+      {
+        "text": "IAM role attached",
+        "completed": false
+      },
+      {
+        "text": "App reads file from S3",
+        "completed": false
+      }
+    ],
+    "deliverables": [
+      "Architecture diagram",
+      "Written flow: User → App → AWS services"
+    ],
+    "completed": false,
+    "notes": "",
+    "issues": "",
+    "fixes": "",
+    "links": []
+  },
+  {
+    "id": "week-6-sat",
+    "week": 6,
+    "day": "Saturday",
+    "title": "Putting It Together",
+    "topic": "FAILURE SIMULATION",
+    "tasks": [
+      {
+        "text": "Block EC2 port accidentally",
+        "completed": false
+      },
+      {
+        "text": "Remove IAM permission",
+        "completed": false
+      },
+      {
+        "text": "Delete route table entry",
+        "completed": false
+      },
+      {
+        "text": "Fix each issue",
+        "completed": false
+      }
+    ],
+    "deliverables": [
+      "Troubleshooting checklist"
+    ],
+    "completed": false,
+    "notes": "",
+    "issues": "",
+    "fixes": "",
+    "links": []
+  },
+  {
+    "id": "week-7-fri",
+    "week": 7,
+    "day": "Friday",
+    "title": "Consolidation & Confidence",
+    "topic": "Cost Awareness & Cleanup",
+    "tasks": [
+      {
+        "text": "Review AWS Cost Explorer",
+        "completed": false
+      },
+      {
+        "text": "Tag all resources",
+        "completed": false
+      },
+      {
+        "text": "Delete everything safely",
+        "completed": false
+      },
+      {
+        "text": "Confirm zero running services",
+        "completed": false
+      }
+    ],
+    "deliverables": [
+      "Screenshot of zero-cost dashboard",
+      "Notes: How cloud bills sneak up"
+    ],
+    "completed": false,
+    "notes": "",
+    "issues": "",
+    "fixes": "",
+    "links": [
+      "https://aws.amazon.com/aws-cost-management/aws-cost-explorer/"
+    ]
+  },
+  {
+    "id": "week-7-sat",
+    "week": 7,
+    "day": "Saturday",
+    "title": "Consolidation & Confidence",
+    "topic": "Explain Like an Engineer",
+    "tasks": [
+      {
+        "text": "Explain IAM, EC2, S3, VPC out loud",
+        "completed": false
+      },
+      {
+        "text": "Rewrite notes cleanly",
+        "completed": false
+      },
+      {
+        "text": "Update GitHub README",
+        "completed": false
+      }
+    ],
+    "deliverables": [
+      "Clean study repo",
+      "Confidence explaining AWS basics"
+    ],
+    "completed": false,
+    "notes": "",
+    "issues": "",
+    "fixes": "",
+    "links": []
   }
 ]
