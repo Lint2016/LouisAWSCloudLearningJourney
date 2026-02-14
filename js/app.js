@@ -5,6 +5,7 @@
 
 import { Storage } from './storage.js';
 import { Auth } from './auth.js';
+import { initMobileMenu } from './ui.js';
 
 async function initDashboard() {
     // 0. Auth Guard
@@ -25,6 +26,9 @@ async function initDashboard() {
 
     // 5. Render Phase/Week
     renderCurrentPhase(sessions);
+
+    // 6. Init Mobile Menu
+    initMobileMenu();
 }
 
 function renderProgress(sessions) {
@@ -80,7 +84,12 @@ function renderCurrentPhase(sessions) {
         phaseName.textContent = "Journey Completed!";
         if (nextText) nextText.textContent = "You are ready for the Cloud.";
     }
+
+
 }
+
+
+
 
 // Start the app
 document.addEventListener('DOMContentLoaded', initDashboard);

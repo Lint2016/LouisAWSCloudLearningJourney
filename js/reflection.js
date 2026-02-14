@@ -5,6 +5,7 @@
 
 import { Storage } from './storage.js';
 import { Auth } from './auth.js';
+import { initMobileMenu } from './ui.js';
 
 async function initReflection() {
     Auth.requireAuth();
@@ -16,6 +17,7 @@ async function initReflection() {
     renderPastReflections();
 
     document.getElementById('save-reflection-btn').addEventListener('click', saveReflection);
+    initMobileMenu();
 }
 
 function populateWeekSelect() {

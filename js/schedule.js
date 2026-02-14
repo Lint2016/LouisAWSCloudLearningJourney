@@ -5,6 +5,7 @@
 
 import { Storage } from './storage.js';
 import { Auth } from './auth.js';
+import { initMobileMenu } from './ui.js';
 
 async function initSchedule() {
     Auth.requireAuth();
@@ -13,6 +14,7 @@ async function initSchedule() {
     await Storage.init();
     const sessions = Storage.getSessions();
     renderSchedule(sessions);
+    initMobileMenu();
 }
 
 function renderSchedule(sessions) {
