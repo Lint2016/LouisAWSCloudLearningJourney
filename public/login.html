@@ -41,8 +41,11 @@
 
                     <div style="text-align: left; margin-bottom: 1.5rem;">
                         <label for="password" class="text-secondary">Password</label>
-                        <input type="password" id="password" class="text-input" placeholder="••••••••" required
-                            style="width: 100%; padding: 0.5rem; margin-top: 0.25rem;">
+                        <div class="password-toggle-wrapper" style="margin-top: 0.25rem;">
+                            <input type="password" id="password" class="text-input" placeholder="••••••••" required
+                                style="width: 100%; padding: 0.5rem;">
+                            <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility"></button>
+                        </div>
                         <div style="text-align: right; margin-top: 0.25rem;">
                             <a href="forgot-password.html" style="font-size: 0.8rem; color: var(--primary);">Forgot
                                 Password?</a>
@@ -61,6 +64,9 @@
 
     <script type="module">
         import { Auth } from './js/auth.js';
+        import { initPasswordToggle } from './js/ui.js';
+
+        initPasswordToggle();
 
         document.getElementById('login-form').addEventListener('submit', async (e) => {
             e.preventDefault();
